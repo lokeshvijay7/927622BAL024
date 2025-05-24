@@ -1,86 +1,36 @@
-# Stock Price Aggregation System - MERN Project
+# 📊 Stock Price Aggregation Microservice
 
-## Overview
+A Node.js + Express microservice to fetch real-time stock insights using average price and correlation over the last "m" minutes.
 
-This project is a Stock Price Aggregation System built with a Node.js + Express backend and a React frontend. It fetches real-time stock price data from a test server API and provides:
+This project is built as part of a full-stack developer assessment for Affordmed.
 
-- Average stock price for a given ticker and time window.
-- Correlation of price movement between two stocks.
+---
 
-## Backend
+## 📌 Features
 
-### Structure
+✅ Get average stock price for the last `m` minutes  
+✅ Calculate Pearson correlation between 2 stock tickers  
+✅ Clean JSON response as per test format  
+✅ No login or authentication required  
+✅ In-memory or mocked stock data simulation  
+✅ Optimized for test constraints (no extra API calls)
 
-- `server.js` - Express server setup.
-- `routes/stockRoutes.js` - API route definitions.
-- `controllers/stockController.js` - Business logic for API endpoints.
-- `utils/stockUtils.js` - Utility functions for filtering, averaging, and correlation.
-- `.gitignore` - Git ignore file.
+---
 
-### Setup and Run
+## 🚀 Endpoints
 
-1. Navigate to the backend directory:
-   ```
-   cd backend
-   ```
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the server:
-   ```
-   node server.js
-   ```
-4. The server runs on `http://localhost:5000`.
+### 1. 📈 Average Stock Price
+**GET** `/stocks/:ticker?minutes=m&aggregation=average`
 
-### API Endpoints
-
-- **GET /stocks/:ticker?minutes=m&aggregation=average**
-
-  Returns the average stock price and price history for the last `m` minutes.
-
-- **GET /stockcorrelation?minutes=m&ticker=XXX&ticker=YYY**
-
-  Returns the correlation of price movement between two stocks.
-
-## Frontend
-
-### Structure
-
-- React app located in `frontend/stock`.
-- Pages:
-  - `StockPage.jsx` - Input ticker and time, display stock price chart.
-  - `CorrelationPage.jsx` - Input two tickers and time, display correlation and comparison chart.
-- Uses Material UI and Chart.js for UI and charts.
-- Axios for API calls.
-
-### Setup and Run
-
-1. Navigate to the frontend directory:
-   ```
-   cd frontend/stock
-   ```
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Start the React app:
-   ```
-   npm start
-   ```
-4. The app runs on `http://localhost:3000`.
-
-## Testing
-
-- Use Postman, curl, or browser to test backend endpoints.
-- Use the React app UI to interact with the frontend pages.
-
-## Notes
-
-- The backend uses a Bearer token (from `token.txt`) for authorization when calling the test server API.
-- The project is designed to be simple and efficient for placement test purposes.
-- No dummy data is used; all data is fetched live from the test server API.
-
-## Contact
-
-For any issues or questions, please contact the developer.
+**Response:**
+```json
+{
+  "averageStockPrice": 453.569744,
+  "priceHistory": [
+    {
+      "price": 231.95296,
+      "lastUpdatedAt": "2025-05-08T04:26:27.4658491Z"
+    },
+    ...
+  ]
+}
