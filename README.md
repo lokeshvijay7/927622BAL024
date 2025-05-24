@@ -8,12 +8,12 @@ This project is built as part of a full-stack developer assessment for Affordmed
 
 ##  Features
 
-✅ Get average stock price for the last `m` minutes  
-✅ Calculate Pearson correlation between 2 stock tickers  
-✅ Clean JSON response as per test format  
-✅ No login or authentication required  
-✅ In-memory or mocked stock data simulation  
-✅ Optimized for test constraints (no extra API calls)
+ Get average stock price for the last `m` minutes  
+ Calculate Pearson correlation between 2 stock tickers  
+ Clean JSON response as per test format  
+ No login or authentication required  
+ In-memory or mocked stock data simulation  
+ Optimized for test constraints (no extra API calls)
 
 ---
 
