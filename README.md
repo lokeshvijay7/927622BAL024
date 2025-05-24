@@ -1,4 +1,4 @@
-# 📊 Stock Price Aggregation Microservice
+# Stock Price Aggregation Microservice
 
 A Node.js + Express microservice to fetch real-time stock insights using average price and correlation over the last "m" minutes.
 
@@ -6,7 +6,7 @@ This project is built as part of a full-stack developer assessment for Affordmed
 
 ---
 
-## 📌 Features
+##  Features
 
 ✅ Get average stock price for the last `m` minutes  
 ✅ Calculate Pearson correlation between 2 stock tickers  
@@ -17,9 +17,9 @@ This project is built as part of a full-stack developer assessment for Affordmed
 
 ---
 
-## 🚀 Endpoints
+## Endpoints
 
-### 1. 📈 Average Stock Price
+### 1. Average Stock Price
 **GET** `/stocks/:ticker?minutes=m&aggregation=average`
 
 **Response:**
